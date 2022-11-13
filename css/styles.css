@@ -387,6 +387,19 @@ margin-right: 70px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.footer-btn{
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  border: none;
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 10px 32px;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+}
 .footer-last-part {
   font-weight: 700;
   font-size: 26px;
@@ -450,6 +463,17 @@ margin-right: 70px;
   text-transform: uppercase;
   color: var(--link-color);
 }
+.footer-input-subscription {
+  height: 50px;
+  width: 358px;
+  background-color: #2F303A;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    margin-right: 12px;
+    padding: 15px 16px;
+}
+
 /*Modal window*/
 .backdrop{
   position: fixed;
@@ -477,7 +501,8 @@ margin-right: 70px;
   transform: translate(-50%, -50%);
 
   border-radius: 4px;
-  background-color: #FFFFFF;
+  background-color: var(--link-color);
+  padding: 40px;
 }
 .close-btn{
   position: absolute;
@@ -490,7 +515,7 @@ margin-right: 70px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
   background-color: transparent;
   padding: 0;
@@ -498,7 +523,7 @@ margin-right: 70px;
 }
 .close-btn:hover,
 .close-btn:focus{
-  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 .backdrop.is-hidden{
   opacity: 0;
@@ -516,24 +541,13 @@ margin-right: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px 40px 12px 40px;
 }
 label{
   display: flex;
   margin-bottom: 4px;
-  padding-left: 40px;
   position: relative;
 }
-input{
-  display: flex;
 
-  width: 448px;
-  height: 40px;
-  left: 576px;
-  top: 314px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-}
 .form-field{
   position: relative;
   flex-direction: column;
@@ -541,8 +555,25 @@ input{
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
-  color: #757575;
+  color: var(--description-color);
   padding-top: 4px;
+}
+.form-input{
+  padding-left: 40px;
+  display: flex;
+  
+    height: 40px;
+    left: 576px;
+    top: 314px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+.form-input:focus ~ .form-icons{
+fill: var(--accent-color);
+cursor: pointer;
+}
+.form-label{
+  margin-bottom: 4px;
 }
 .form-icons{
   position: absolute;
@@ -550,13 +581,79 @@ input{
   display: inline-block;
   align-items: center;
   justify-content: center;
-  margin: 25px 0px 11px 12px;
+  margin: 30px 0px 11px 12px;
+}
+.form-agreement{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 7px;
+margin-bottom: 30px;
+}
+.comment{
+  margin-bottom: 20px;
+}
+.form-message{
+  padding-top: 12px;
+  padding-left: 16px;
+}
+.form-message::placeholder{
+font-weight: 400;
+font-size: 12px;
+line-height: calc(14/12);
+letter-spacing: 0.01em;
+color: rgba(117, 117, 117, 0.5);
+}
+.form-checkbox:checked{
+  background-image: url("data:image/svg+xml,%3Csymbol id='icon-Vector' viewBox='0 0 42 32'%3E%3Cpath fill='%23fff' style='fill: var(--color1, %23fff); stroke: var(--color1, %23fff)' stroke='%23fff' stroke-linejoin='miter' stroke-linecap='butt' stroke-miterlimit='4' stroke-width='0.64' d='M6.263 15.205l-0.22-0.21-3.307 3.132 11.651 11.114 24.477-23.351-3.285-3.134-21.192 20.197-8.124-7.75z'%3E%3C/path%3E%3C/symbol%3E");
+  background-color: var(--accent-color);
+  border-color: transparent;
+  border-radius: 2px;
 }
 .form-checkbox{
-font-weight: 400;
-font-size: 14px;
-line-height: 24px;
-letter-spacing: 0.03em;
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid var(--main-color);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.form-agreement-text{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24/14);
+  letter-spacing: 0.03em;
+  color: var(--description-color);
+}
+.form-text-agreement{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+.form-agreement-link{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24/14);
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+.form-btn{
+display: block;
+margin: 0 auto;
+border: none;
+background-color: var(--accent-color);
+font-weight: 700;
+font-size: 16px;
+line-height: 30px;
+padding: 10px 32px;
+border-radius: 4px;
+letter-spacing: 0.06em;
+
+
 }
 /* PORTFOLIO */
 .portfolio{
@@ -598,6 +695,9 @@ letter-spacing: 0.03em;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
+.container-footer{
+  margin-right: 93px;
+}
 .container-item:hover,
 .container-item:focus{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -617,6 +717,15 @@ letter-spacing: 0.03em;
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
   color: var(--description-color);
+}
+.footer-input-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16/14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--link-color);
+  margin-bottom: 20px;
 }
 .team-thumb{
   position: relative;

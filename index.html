@@ -628,7 +628,7 @@
                 <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
               </svg>
             </label>
-            <label class="form-field">
+            <label class="form-field comment">
               <span class="form-label">Коментар</span>
               <textarea
                 class="form-message"
@@ -637,14 +637,20 @@
                 placeholder="Введіть текст"
               ></textarea>
             </label>
-            <label class="form-checkbox">
-              <input type="checkbox" name="user_agreement" value="agreement" />
-              <span class="form-label">Погоджуюся з розсилкою та приймаю</span>
-              <span class="form-label"
-                >Умови договору <a href="Conditions"></a>
+            <label class="form-agreement">
+              <input
+                class="form-checkbox"
+                type="checkbox"
+                name="agreement-checkbox"
+                value="agreement"
+              />
+
+              <span class="form-agreement-text"
+                >Погоджуюся з розсилкою та приймаю
+                <a class="form-agreement-link" href="">Умови договору</a>
               </span>
             </label>
-            <button class="form-btn" type="submit">Відправити</button>
+            <button class="form-btn button" type="submit">Відправити</button>
           </div>
         </form>
       </div>
